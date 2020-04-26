@@ -17,8 +17,5 @@ public class PersonDTO {
 	private String email;
 	private String tele;
 	
-	public static PersonDTO convert(Person person) {
-	
-		return new PersonDTO(person.getIdPerson(),person.getFirstName(),person.getLastName(),person.getEmail(),person.getTele());
-	}
+
 }

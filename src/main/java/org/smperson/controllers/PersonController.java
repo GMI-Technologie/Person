@@ -19,31 +19,31 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("api/persons")
 public class PersonController {
 
-	@Autowired
-	IPersonService personService;
-	
-	@GetMapping
-	public List<PersonDTO> getPersons(){
-		return personService.getPersons();
-	}
-	
-	@PostMapping
-	public PersonDTO savePerson(@RequestBody PersonForm personForm) {
-		return personService.savePerson(personForm);
-	}
-	
-	@GetMapping("/{idPerson}")
-	public PersonDTO getPerson(@PathVariable Long idPerson) {
-		return personService.getPerson(idPerson);
-	}
-	
-	@PutMapping("/{idPerson}")
-	public PersonDTO updatePerson(@PathVariable Long idPerson , PersonForm personForm) {
-		return personService.updatePerson(idPerson, personForm);
-	}
-	
-	@DeleteMapping("/{idPerson}")
-	public boolean deletePerson(@PathVariable Long idPerson) {
-		return personService.deletePerson(idPerson);
-	}
+    @Autowired
+    IPersonService personService;
+
+    @GetMapping
+    public List<PersonDTO> getPersons() {
+        return personService.getPersons();
+    }
+
+    @PostMapping
+    public PersonDTO savePerson(@RequestBody PersonForm personForm) {
+        return personService.savePerson(personForm);
+    }
+
+    @GetMapping("/{idPerson}")
+    public PersonDTO getPerson(@PathVariable Long idPerson) {
+        return personService.getPerson(idPerson);
+    }
+
+    @PutMapping("/{idPerson}")
+    public PersonDTO updatePerson(@PathVariable Long idPerson, @RequestBody PersonForm personForm) {
+        return personService.updatePerson(idPerson, personForm);
+    }
+
+    @DeleteMapping("/{idPerson}")
+    public boolean deletePerson(@PathVariable Long idPerson) {
+        return personService.deletePerson(idPerson);
+    }
 }

@@ -18,18 +18,20 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Person {
 
-	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long idPerson;
-	private String firstName;
-	private String lastName;
-	private String email;
-	private String tele;
-	
-	
-	public void setData(PersonForm personForm) {
-           setFirstName(personForm.getFirstName());
-           setLastName(personForm.getLastName());
-           setEmail(personForm.getEmail());
-           setTele(personForm.getTele());
-	}
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long idPerson;
+    private String firstName;
+    private String lastName;
+    private String email;
+    private String tele;
+
+
+    public void setData(PersonForm personForm) {
+        setFirstName(personForm.getFirstName());
+        setLastName(personForm.getLastName());
+        setEmail(personForm.getEmail());
+        setTele(personForm.getTele());
+    }
+
 }

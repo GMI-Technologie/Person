@@ -16,10 +16,6 @@ public class PersonForm {
 	private String email;
 	private String tele;
 	
-	public static Person extract(PersonForm personForm) {
-		Person pers=new Person();
-		pers.setData(personForm);
-		return pers;
-	}
+
 	
 }
